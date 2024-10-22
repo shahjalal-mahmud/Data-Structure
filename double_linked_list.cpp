@@ -8,11 +8,12 @@ public:
     Node *prev;
     Node(int value) : data(value), next(nullptr), prev(nullptr) {}
 };
-void Traversal(Node *ptr)   //Does not have a returtn type
+void Traversal(Node *ptr)
 {
+    cout<<"The Linked List: ";
     while (ptr != nullptr)
     {
-        cout << "Element: " << ptr->data << endl;
+        cout<< ptr->data <<" ";
         ptr = ptr->next;
     }
 }

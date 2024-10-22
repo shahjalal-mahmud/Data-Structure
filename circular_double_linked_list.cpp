@@ -11,12 +11,12 @@ public:
 Node *Traversal(Node *head)
 {
     Node *ptr = head;
+    cout<<"The Linked list: ";
     do
     {
-        cout<<"Element: "<<ptr->data<<endl;
+        cout<< ptr->data <<" ";
         ptr = ptr->next;
     } while (ptr != head);
-    
 }
 int main()
 {

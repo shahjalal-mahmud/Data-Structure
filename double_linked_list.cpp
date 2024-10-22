@@ -8,7 +8,7 @@ public:
     Node *prev;
     Node(int value) : data(value), next(nullptr), prev(nullptr) {}
 };
-Node *Traversal(Node *ptr)
+void Traversal(Node *ptr)   //Does not have a returtn type
 {
     while (ptr != nullptr)
     {

@@ -61,13 +61,10 @@ int main()
     list.insertAtEnd(22);
     list.insertAtEnd(33);
     list.insertAtEnd(44);
-    list.insertAtEnd(55);
 
     list.Traverse();
 
     list.insertAfterNode(99, 22);
-
     list.Traverse();
-
     return 0;
 }

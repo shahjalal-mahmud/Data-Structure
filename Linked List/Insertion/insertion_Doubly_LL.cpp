@@ -31,14 +31,8 @@ public:
     void insertAtTail(int data)
     {
         Node *newNode = new Node(data);
-        Node *current = head;
-        while (current->next != nullptr)
-        {
-            current = current->next;
-        }
-        newNode->next = current->next;
-        newNode->prev = current;
-        current->next = newNode;
+        tail->next = newNode;
+        newNode->prev = tail;
         tail = newNode;
     }
     void insertAfterNode(int data, int target)
@@ -63,13 +57,13 @@ public:
             current = current->next;
         }
         cout << endl;
-    }
+    } 
 };
 int main()
 {
     Linkedlist list;
 
-     list.insertAtHead(101);
+    list.insertAtHead(101);
     list.insertAtTail(102);
     list.insertAtTail(103);
     list.insertAtTail(104);

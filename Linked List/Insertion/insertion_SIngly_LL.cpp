@@ -28,7 +28,6 @@ public:
         {
             current = current->next;
         }
-        newNode->next = current->next;
         current->next = newNode;
     }
     void insertAfterNode(int data, int target)

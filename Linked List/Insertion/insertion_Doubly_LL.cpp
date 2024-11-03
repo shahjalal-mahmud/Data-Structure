@@ -58,6 +58,15 @@ public:
         }
         cout << endl;
     } 
+    void reverseTraverse(){
+        Node *current = tail;
+        while (current!=nullptr)
+        {
+            cout<<current->data<<" ";
+            current = current->prev;
+        }
+        cout<<endl;
+    }
 };
 int main()
 {
@@ -78,5 +87,7 @@ int main()
 
     list.insertAfterNode(199, 104);
     list.Traverse();
+
+    list.reverseTraverse();
     return 0;
 }

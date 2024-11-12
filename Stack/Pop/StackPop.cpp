@@ -22,18 +22,15 @@ public:
     }
     void pop()
     {
-        Node *temp = top;
         top = top->next;
-        cout << temp->data << " poped" << endl;
-        delete temp;
     }
     void Traverse()
     {
-        Node *current = top;
-        while (current != nullptr)
+        Node *temp = top;
+        while (temp != nullptr)
         {
-            cout << current->data << " ";
-            current = current->next;
+            cout << temp->data << " ";
+            temp = temp->next;
         }
         cout << endl;
     }
@@ -45,7 +42,6 @@ int main()
     st.push(20);
     st.push(30);
     st.push(40);
-    st.push(50);
     st.Traverse();
 
     st.pop();

@@ -1,15 +1,13 @@
 #include <iostream>
 using namespace std;
-class Queue
-{
+class Node{
+public:
+    int data;
+    Node *next;
+    Node(int value) : data(value), next(nullptr) {}
+};
+class Queue {
 private:
-    class Node
-    {
-    public:
-        int data;
-        Node *next;
-        Node(int value) : data(value), next(nullptr) {}
-    };
     Node *front;
     Node *rare;
 
@@ -46,7 +44,6 @@ int main()
     q.enqueue(12);
     q.enqueue(13);
     q.enqueue(14);
-    q.enqueue(15);
     q.Traverse();
 
     q.dequeue();

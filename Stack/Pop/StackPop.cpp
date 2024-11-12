@@ -1,31 +1,25 @@
 #include <iostream>
 using namespace std;
-class Node
-{
+class Node{
 public:
     int data;
     Node *next;
     Node(int value) : data(value), next(nullptr) {}
 };
-class Stack
-{
+class Stack {
 private:
     Node *top;
-
 public:
     Stack() : top(nullptr) {}
-    void push(int data)
-    {
+    void push(int data){
         Node *newNode = new Node(data);
         newNode->next = top;
         top = newNode;
     }
-    void pop()
-    {
+    void pop(){
         top = top->next;
     }
-    void Traverse()
-    {
+    void Traverse(){
         Node *temp = top;
         while (temp != nullptr)
         {
@@ -35,8 +29,7 @@ public:
         cout << endl;
     }
 };
-int main()
-{
+int main() {
     Stack st;
     st.push(10);
     st.push(20);

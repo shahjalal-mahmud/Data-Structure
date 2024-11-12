@@ -13,11 +13,9 @@ private:
 
 public:
     Queue() : front(nullptr), rare(nullptr) {}
-    void enqueue(int data)
-    {
+    void enqueue(int data){
         Node *newNode = new Node(data);
-        if (front == nullptr)
-        {
+        if (front == nullptr){
             front = rare = newNode;
             return;
         }
@@ -29,16 +27,14 @@ public:
     }
     void Traverse(){
         Node *temp = front;
-        while (temp!=nullptr)
-        {
+        while (temp!=nullptr){
             cout<<temp->data<<" ";
             temp = temp->next;
         }
         cout<<endl;
     }
 };
-int main()
-{
+int main(){
     Queue q;
     q.enqueue(11);
     q.enqueue(12);

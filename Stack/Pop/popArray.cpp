@@ -1,21 +1,18 @@
 #include <iostream>
 using namespace std;
-class Stack
-{
+class Stack {
 private:
     int *arr;
     int capacity;
     int top;
 
 public:
-    Stack(int size)
-    {
+    Stack(int size) {
         arr = new int[size];
         capacity = size;
         top = -1;
     }
-    void push(int data)
-    {
+    void push(int data){
         arr[++top] = data;
     }
     void pop(){
@@ -29,8 +26,7 @@ public:
         cout<<endl;
     }
 };
-int main()
-{
+int main(){
     Stack st(100);
     st.push(10);
     st.push(20);

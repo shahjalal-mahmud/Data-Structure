@@ -6,7 +6,6 @@ private:
     int capacity;
     int front;
     int rare;
-
 public:
     Queue(int size) {
         arr = new int[size];
@@ -14,15 +13,12 @@ public:
         front = 0;
         rare = -1;
     }
-
     void enqueue(int data) {
         arr[++rare] = data;
     }
-
     void dequeue() {
         front++;
     }
-
     void Traverse() {
         for (int i = front; i <= rare; i++) {
             cout << arr[i] << " ";
@@ -30,7 +26,6 @@ public:
         cout << endl;
     }
 };
-
 int main() {
     Queue q(10);
     q.enqueue(11);

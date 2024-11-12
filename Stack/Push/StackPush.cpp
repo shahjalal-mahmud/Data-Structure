@@ -17,11 +17,6 @@ public:
     void push(int data)
     {
         Node *newNode = new Node(data);
-        if (top == nullptr)
-        {
-            top = newNode;
-            return;
-        }
         newNode->next = top;
         top = newNode;
     }
